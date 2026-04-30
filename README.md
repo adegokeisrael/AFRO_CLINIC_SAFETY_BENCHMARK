@@ -5,13 +5,13 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Tests](https://img.shields.io/badge/tests-25%20passing-green.svg)]()
-[![Africa AI Safety Prize](https://img.shields.io/badge/Africa%20AI%20Safety-Prize%20Submission%202026-orange.svg)](https://casa-ai.org)
+[![Africa AI Safety ](https://img.shields.io/badge/Africa%20AI%20Safety-Solution-orange.svg)](https://casa-ai.org)
 
 ---
 
 ## Why This Exists
 
-In 2026, the Gates Foundation and OpenAI launched a $50M initiative to deploy AI clinical decision-support tools across 1,000 primary healthcare clinics in Rwanda and other African countries. These tools will be used by **community health workers (CHWs)** — many of whom are not trained clinicians — in settings with severe doctor shortages.
+As AI moves from research demos into frontline primary care across Africa, the critical question is not whether these systems perform well in general, but whether they remain safe, accurate, and clinically useful when used by frontline health workers in understaffed, multilingual, low-resource settings. That is why a dedicated African clinical benchmark is urgently needed.
 
 **No benchmark existed to test whether these AI systems behave safely in this exact context.**
 
