@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 492" width="680" height="492">
+<title>ClinicalSafetyBench — Framework Pipeline</title>
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <style>
+    .layer-box { fill:none; stroke:#dde3ec; stroke-width:1; }
+    .layer-lbl { font:600 11px sans-serif; fill:#888; }
+    .node-teal   { fill:#e8f7f4; stroke:#2aaa8a; stroke-width:1; }
+    .node-amber  { fill:#fff8e8; stroke:#c9a227; stroke-width:1; }
+    .node-green  { fill:#edfaf1; stroke:#27ae60; stroke-width:1; }
+    .node-purple { fill:#f3effe; stroke:#7c4dff; stroke-width:1; }
+    .node-blue   { fill:#eaf3fd; stroke:#2e75b6; stroke-width:1; }
+    .node-coral  { fill:#fdf0ee; stroke:#e05c4a; stroke-width:1; }
+    .node-gray   { fill:#f5f6f7; stroke:#999; stroke-width:1; }
+    .th { font:700 12px sans-serif; fill:#1a1a1a; }
+    .ts { font:400 10px sans-serif; fill:#555; }
+    .arr { stroke:#aab; stroke-width:1; marker-end:url(#arr); }
+  </style>
+</defs>
+
+<!-- ── Layer 1: Data Sources ──────────────────────────────────── -->
+<rect class="layer-box" x="20" y="10" width="640" height="128" rx="10"/>
+<text class="layer-lbl" x="36" y="26">DATA SOURCES</text>
+
+<rect class="node-teal" x="38" y="32" width="105" height="90" rx="6"/>
+<text class="th" x="90" y="56" text-anchor="middle">Kenya</text>
+<text class="ts" x="90" y="74" text-anchor="middle">10 prompts</text>
+<text class="ts" x="90" y="90" text-anchor="middle">CMNHB 2019</text>
+
+<rect class="node-teal" x="157" y="32" width="105" height="90" rx="6"/>
+<text class="th" x="209" y="56" text-anchor="middle">Rwanda</text>
+<text class="ts" x="209" y="74" text-anchor="middle">7 prompts</text>
+<text class="ts" x="209" y="90" text-anchor="middle">MoH 2020</text>
+
+<rect class="node-teal" x="276" y="32" width="105" height="90" rx="6"/>
+<text class="th" x="328" y="56" text-anchor="middle">Nigeria</text>
+<text class="ts" x="328" y="74" text-anchor="middle">10 prompts</text>
+<text class="ts" x="328" y="90" text-anchor="middle">STG 2022</text>
+
+<rect class="node-amber" x="395" y="32" width="105" height="90" rx="6"/>
+<text class="th" x="447" y="56" text-anchor="middle">+ Country</text>
+<text class="ts" x="447" y="74" text-anchor="middle">Extensible</text>
+<text class="ts" x="447" y="90" text-anchor="middle">Any guideline</text>
+
+<rect class="node-green" x="514" y="32" width="126" height="90" rx="6"/>
+<text class="th" x="577" y="56" text-anchor="middle">Languages</text>
+<text class="ts" x="577" y="74" text-anchor="middle">Swahili · Hausa</text>
+<text class="ts" x="577" y="90" text-anchor="middle">Amharic · Pidgin</text>
+
+<!-- Arrow Data → Engine -->
+<line class="arr" x1="340" y1="138" x2="340" y2="155"/>
+
+<!-- ── Layer 2: Evaluation Engine ─────────────────────────────── -->
+<rect class="layer-box" x="20" y="157" width="640" height="90" rx="10"/>
+<text class="layer-lbl" x="36" y="172">EVALUATION ENGINE</text>
+
+<rect class="node-purple" x="38" y="180" width="182" height="56" rx="6"/>
+<text class="th" x="129" y="202" text-anchor="middle">BenchmarkLoader</text>
+<text class="ts" x="129" y="220" text-anchor="middle">Load · validate · filter</text>
+
+<rect class="node-purple" x="240" y="180" width="182" height="56" rx="6"/>
+<text class="th" x="331" y="202" text-anchor="middle">Evaluator</text>
+<text class="ts" x="331" y="220" text-anchor="middle">Query · retry · log</text>
+
+<rect class="node-purple" x="442" y="180" width="198" height="56" rx="6"/>
+<text class="th" x="541" y="202" text-anchor="middle">Scorer &amp; Metrics</text>
+<text class="ts" x="541" y="220" text-anchor="middle">Score · aggregate · report</text>
+
+<!-- Engine horizontal arrows -->
+<line class="arr" x1="220" y1="208" x2="240" y2="208"/>
+<line class="arr" x1="422" y1="208" x2="442" y2="208"/>
+
+<!-- Arrows Engine → adapters and checkers -->
+<line class="arr" x1="174" y1="247" x2="174" y2="265"/>
+<line class="arr" x1="504" y1="247" x2="504" y2="265"/>
+
+<!-- ── Layer 3a: Model Adapters ───────────────────────────────── -->
+<rect class="layer-box" x="20" y="267" width="308" height="120" rx="10"/>
+<text class="layer-lbl" x="36" y="282">MODEL ADAPTERS</text>
+
+<rect class="node-blue" x="38" y="290" width="128" height="40" rx="6"/>
+<text class="th" x="102" y="305" text-anchor="middle">GPT-4o</text>
+<text class="ts" x="102" y="321" text-anchor="middle">OpenAI</text>
+
+<rect class="node-blue" x="180" y="290" width="128" height="40" rx="6"/>
+<text class="th" x="244" y="305" text-anchor="middle">Claude 3.5</text>
+<text class="ts" x="244" y="321" text-anchor="middle">Anthropic</text>
+
+<rect class="node-blue" x="38" y="338" width="128" height="40" rx="6"/>
+<text class="th" x="102" y="353" text-anchor="middle">Gemini 1.5</text>
+<text class="ts" x="102" y="369" text-anchor="middle">Google</text>
+
+<rect class="node-amber" x="180" y="338" width="128" height="40" rx="6"/>
+<text class="th" x="244" y="353" text-anchor="middle">+ New model</text>
+<text class="ts" x="244" y="369" text-anchor="middle">BaseModelAdapter</text>
+
+<!-- ── Layer 3b: Failure Mode Checkers ───────────────────────── -->
+<rect class="layer-box" x="348" y="267" width="312" height="120" rx="10"/>
+<text class="layer-lbl" x="364" y="282">FAILURE MODE CHECKERS</text>
+
+<rect class="node-coral" x="366" y="290" width="132" height="40" rx="6"/>
+<text class="th" x="432" y="305" text-anchor="middle">Dosage Error</text>
+<text class="ts" x="432" y="321" text-anchor="middle">Wrong dose / drug</text>
+
+<rect class="node-coral" x="512" y="290" width="132" height="40" rx="6"/>
+<text class="th" x="578" y="305" text-anchor="middle">Hallucination</text>
+<text class="ts" x="578" y="321" text-anchor="middle">Fake referral</text>
+
+<rect class="node-coral" x="366" y="338" width="132" height="40" rx="6"/>
+<text class="th" x="432" y="353" text-anchor="middle">Guideline Δ</text>
+<text class="ts" x="432" y="369" text-anchor="middle">Protocol breach</text>
+
+<rect class="node-coral" x="512" y="338" width="132" height="40" rx="6"/>
+<text class="th" x="578" y="353" text-anchor="middle">Language</text>
+<text class="ts" x="578" y="369" text-anchor="middle">Code-switching</text>
+
+<!-- Arrows: layers 3 → outputs -->
+<line class="arr" x1="174" y1="387" x2="174" y2="401"/>
+<line class="arr" x1="504" y1="387" x2="504" y2="401"/>
+
+<!-- ── Layer 4: Outputs ───────────────────────────────────────── -->
+<rect class="layer-box" x="20" y="403" width="640" height="76" rx="10"/>
+<text class="layer-lbl" x="36" y="418">OUTPUTS</text>
+
+<rect class="node-gray" x="38" y="424" width="185" height="46" rx="6"/>
+<text class="th" x="130" y="441" text-anchor="middle">JSONL Results</text>
+<text class="ts" x="130" y="459" text-anchor="middle">Per-model · per-country</text>
+
+<rect class="node-gray" x="243" y="424" width="185" height="46" rx="6"/>
+<text class="th" x="335" y="441" text-anchor="middle">HTML Report</text>
+<text class="ts" x="335" y="459" text-anchor="middle">GAR · DAR · RHR · OSS</text>
+
+<rect class="node-gray" x="448" y="424" width="192" height="46" rx="6"/>
+<text class="th" x="544" y="441" text-anchor="middle">CLI &amp; Extension API</text>
+<text class="ts" x="544" y="459" text-anchor="middle">csb-eval · csb-report</text>
+</svg>
